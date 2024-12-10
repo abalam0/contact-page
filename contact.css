@@ -1,0 +1,291 @@
+@import url("./Satoshi_Complete/Fonts/WEB/css/satoshi.css");
+
+
+/*start css of full-web-maintain part */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family:'Satoshi_Complete',sans-serif;
+}
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.side-gap{
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+/* start of variable */
+:root{
+    /* color property start */
+    --white:#ffffff;
+    --white2:#E4E4E7;
+    --white3:#FCFCFC;
+    --white4:#E4E4E7;
+    --black:#18181B;
+    --black2:#18181B;
+    --gray:#70707B;
+    --gray1:#F4F4F5;
+    --gray3:#D1D1D6;
+    --gray4:#A0A0AB;
+    --gray-dark:#51525C;
+    --red:red;
+    --green:green;
+    /* color property end */
+    /* size property  start*/
+    --large-size:6.5rem;
+    --large-size:
+    --medium1:4rem;
+    --medium2:3.25rem;
+    --small:3rem;
+    --x-small1:2.5rem;
+    --x-small2:2rem;
+    --x-small3:1.5rem;
+    --x-small4:1.3rem;
+    --location-gap:0.5rem;
+    --default-size:1rem;
+    --font-weight1:100;
+    --font-weight2:700;
+    /* size property end */
+}
+/* end of variable */
+
+
+a{
+    text-decoration: none;
+}
+
+/*end css of full-web-maintain part */
+
+/* start css of header */
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 5.18rem;
+    align-items: center;
+}
+
+.logo-name{
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    font-size: var(--x-small3);
+    font-weight: 700;
+    color: var(--black);
+}
+
+
+.logo-name p{
+    padding-left: 0.5rem;
+}
+
+
+header nav{
+    display: flex;
+    gap: 2rem;
+    font-weight: var(--font-weight1);
+}
+
+header nav a{
+    text-decoration: none;
+    font-size: 10px;
+    color: var(--gray);
+}
+
+.contact-btn button{
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    padding: 0.625rem 1.125rem;
+    border-radius: 0.375rem;
+}
+/* end css of header */
+
+
+/* start of main body */
+
+.main-body{
+    margin-top: 5rem;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3.5rem;
+}
+
+.title h1{
+    line-height: 2;
+}
+
+.contact-part{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.sh-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sh-text h1{
+    font-size: var(--medium2);
+    font-weight: var(--font-weight1);
+}
+
+.sh-text p{
+    color: var(--gray);
+    line-height: 2;
+}
+
+
+
+/* left part start */
+.left-part .agree{
+    display: flex;
+    gap: 1%;
+}
+
+.left-part .gap{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 20%;
+    overflow: hidden;
+    border: 1px solid var(--white2);
+}
+
+/* first last and email part start */
+
+.first-last{
+    display: flex;
+    height: 2rem;
+
+}
+
+.left-part .first{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 2%;
+}
+
+
+.first input{
+    flex-grow: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+.left-part .email input{
+    padding: 1.4rem;
+}
+
+/* first last and email part end */
+
+.left-part{
+    width: 52%;
+}
+
+
+.left-part .phone label{
+    padding-bottom: 1rem;
+}
+
+
+.search{
+    border: 2px solid var(--white2);
+    display: flex;
+    align-items: center;
+    gap: 0.4%;
+    border-radius: 0.3rem;
+    height: 3rem;
+    overflow: hidden;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.search input , textarea{
+    resize: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;  
+}
+
+
+.search .country-select{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 0.2rem;
+}
+
+.message{
+    height: 8rem;
+}
+
+textarea{
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+
+
+.agree{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--gray);
+}
+
+
+.contact-btn button{
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    padding: 0.625rem 1.125rem;
+    border-radius: 0.375rem;
+    text-align: center;
+}
+
+/* left part end */
+
+/* start of right part */
+
+.right-part{
+    width: 46%;
+}
+
+.all-contact{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+.right-part .contact-text1{
+    width: 49%;
+    gap: 2%;
+    margin-bottom: 1rem;
+}
+
+.right-part h5{
+    font-size: 1.1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+/* end of right part */
+/* end of main body */
