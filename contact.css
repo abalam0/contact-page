@@ -62,7 +62,6 @@ a{
 
 /*end css of full-web-maintain part */
 
-
 /* start css of header */
 header{
     z-index: 4;
@@ -78,15 +77,15 @@ header{
     gap: 1%;
     font-size: var(--x-small3);
     font-weight: var(--font-weight2);
-    color: var(--black);
 }
 
 .logo-name p{
     padding-left: 0.5rem;
+    color: var(--black);
 }
 
 
-header nav{
+ nav{
     display: flex;
     gap: 2rem;
 }
@@ -94,7 +93,7 @@ header nav{
 header nav a{
     text-decoration: none;
     font-size: 1rem;
-    color: var(--gray-dark);
+    color: var(--gray);
     font-weight:100;
     position: relative;
     transition: color 0.8s ease ;
@@ -128,7 +127,7 @@ nav a::after{
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: var(--white3);
+    background-color: var(--gray);
     transition: width  0.3s ease-out;
 }
 
@@ -136,7 +135,7 @@ nav a:hover::after{
     width: 100%;
 }
 
-.contact-btn button{
+header .contact-btn button{
     background-color: var(--black);
     color: var(--white);
     border: none;
@@ -150,10 +149,15 @@ nav a:hover::after{
     color: var(--white);
 }
 
-
- .three-dot{
+.three-dot{
     display: none;
 }
+
+
+.bar{
+    display: none;
+}
+
 
 /* end hover and animation */
 /* end css of header */
@@ -446,7 +450,7 @@ footer{
 }
 
 
-footer .logo-name{
+footer .logo-name p{
     color: var(--white);
 }
 
@@ -546,145 +550,191 @@ footer .right-info a:hover{
         margin: 0 auto;
         }   
 
+    /* start of header */
 
-        /* start of header */
+    header{
+        position: absolute;
+        top: 0;
+        transform: translate(2.6%, 0%);
 
-        header nav{
-            display: none;
-        }
-        header button{
-            display: none;
-        }
+    }
 
-        header .three-dot{
-            display: block;
-        }
-        /* end of header */
+    header nav{
+        display: none;
+    }
+    header button{
+        display: none;
+    }
 
+    header .three-dot{
+        display: block;
+    }
 
-        /* start of main body */
+    /* start of dot bar */
+    .bar{
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: -5;
+        width: 100%;
+        height: 100%;
+        padding:2rem;
+        visibility: hidden;
+        opacity: 0;
+        background-color: #ffffff;
+        transition: all 0.6s ease-in-out;
+    }
 
-        .contact-part {
-            flex-direction: column;
-        }
+    .bar .logo-cross{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .first-last {
-            flex-direction: column;
-            height: auto;
-        }
+    #bar:target{
+        z-index: 5;
+        visibility: visible;
+        opacity: 1;
+    }
 
+    .bar p{
+        color: var(--black);
+    }
 
-        .left-part .last {
-            width: 100%;
-            margin-top: 1rem;
-        }
+    .bar a i{
+        font-size: 1.3rem;
+        color: lightslategrey;
+    }
+    
 
+    .bar nav{
+        margin-top: 3rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-        .left-part {
-            width: 100%;
-            margin-bottom: 3rem;
-        }
+    .bar a{
+        color: var(--black);
+    }
 
-        .right-part {
-            width: 100%;
-        }
-        /* end of main body */
+    .bar button{
+        background-color: var(--black);
+        color: var(--white);
+        border: none;
+        padding: 0.625rem 1.125rem;
+        border-radius: 0.375rem;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /* start of footer */
-
-        .address{
-            flex-direction: column;
-        }
-            
-        .phone-general{
-            width: 100%;
-            justify-content: start;
-            gap: 8%;
-        }
-
-
-        .office{
-            width: 100%;
-        }
-
-        .information {
-            flex-direction: column;
-        }
-
-
-        .left-info {
-            width: 100%;
-        }
-
-        .left-info h3 {
-            width: 100%;
-        }
-
-
-        .right-info{
-            width: 100%;
-            flex-direction: column;
-        }
-
-        .navigation{
-            width: 100%;
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .all-nav{
-            justify-content: start;
-            gap: 8%;
-        }
-
-        .social-link {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            gap: 5%;
-            flex-wrap:wrap;
-        }
-
-        .slink{
-            display: inline-block;
-            color: var(--white);
-        }
+    /* start of dot bar */
+    /* end of header */
 
 
 
-        .footer-text {
-            flex-direction: column;
-        }
+    /* start of main body */
 
-        .copyright{
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-        /* end of footer */
+    .title {
+        margin-top: 5rem;
+    }
+
+    .contact-part {
+        flex-direction: column;
+    }
+
+    .first-last {
+        flex-direction: column;
+        height: auto;
+    }
+
+
+    .left-part .last {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+
+    .left-part {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .right-part {
+        width: 100%;
+    }
+    /* end of main body */
+
+    /* start of footer */
+
+    .address{
+        flex-direction: column;
+    }
+        
+    .phone-general{
+        width: 100%;
+        justify-content: start;
+        gap: 8%;
+    }
+
+
+    .office{
+        width: 100%;
+    }
+
+    .information {
+        flex-direction: column;
+    }
+
+
+    .left-info {
+        width: 100%;
+    }
+
+    .left-info h3 {
+        width: 100%;
+    }
+
+
+    .right-info{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navigation{
+        width: 100%;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .all-nav{
+        justify-content: start;
+        gap: 8%;
+    }
+
+    .social-link {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 5%;
+        flex-wrap:wrap;
+    }
+
+    .slink{
+        display: inline-block;
+        color: var(--white);
+    }
+
+
+
+    .footer-text {
+        flex-direction: column;
+    }
+
+    .copyright{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    /* end of footer */
 
 
 
