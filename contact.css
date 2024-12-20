@@ -542,7 +542,7 @@ footer .right-info a:hover{
     
     
     /*  start css for mobail */
-    @media only screen and (min-width: 0px) and (max-width: 575.98px){
+    @media only screen and (min-width: 0px) and (max-width: 766.98px){
 
 
         .side-gap{
@@ -739,5 +739,4 @@ footer .right-info a:hover{
 
 
     }
-
     /*  end css for mobail */
